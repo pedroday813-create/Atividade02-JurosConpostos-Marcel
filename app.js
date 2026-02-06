@@ -3,7 +3,7 @@
 * Objetivo: Desenvolver uma aplicação para a empresa AlphaFlow usando o calcule de juros simples usando javascript.
 * Data: 06/02/2026
 * Autor: Pedro Rodrigues
-* Versão: 1.0
+* Versão: 1.4
 
 **********************************************************************************/
 
