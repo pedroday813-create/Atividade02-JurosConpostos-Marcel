@@ -18,26 +18,23 @@ const dados = readline.createInterface({
 
 
 dados.question('Digite seu nome: ', function(nome) {
-    let nome = nome
     // Solicitação do nome
 
     dados.question('Digite o nome do produto: ', function(produto) {
-        let produto = produto
         // Solicitação do nome do produto
 
         dados.question('Digite o preço do produto: ', function(preco) {
-            let preco = preco
             // Solicitação do preço do produto
+
             dados.question('Digite a taxa de juros (ex: 5 para 5%): ', function(taxa) {
-                let taxa = taxa
                 // Solicitação da taxa de juros
 
                 dados.question('Digite o número de parcelas/tempo: ', function(valorTempo) {
-                    let valorTempo = valorTempo
-                    // Solicitação do número de parcelas/tempo
+                    // Solicitação do número de parcelas ou tempo
 
                     dados.question('A entrada acima é em (1) Meses ou (2) Anos? ', function(unidade) {
-
+                       // Solicitação da unidade de tempo (Meses ou Anos)
+                       
                         // 1. Verificação de campos vazios
                         if (nome == '' || produto == '' || preco == '' || taxa == '' || valorTempo == '') {
                             console.log('\nERRO: é obrigatório o preenchimento de todos os dados.');
@@ -57,7 +54,9 @@ dados.question('Digite seu nome: ', function(nome) {
                             let montante = p * (1 + (i * n));
                             let acrescimo = montante - p;
 
-                            // 3. Exibição dos resultados e agradecimentos ao usuário                           console.log('\n******************* [AlphaFlow] *******************');
+                            // 3. Exibição dos resultados       
+                            console.log('   ');                  
+                            console.log('\n******************* [AlphaFlow] *******************');
                             console.log(`Muito obrigado por realizar a sua compra conosco Sr(a) ${nome}.`);
                             console.log(`A compra do produto ${produto}, tem um valor original de: R$ ${p.toFixed(2)}.`);
                             console.log(`O tempo total considerado foi de: ${n} meses.`);
@@ -66,7 +65,8 @@ dados.question('Digite seu nome: ', function(nome) {
                             console.log(`Muito obrigado por escolher a AlphaFlow.`);
                             console.log('****************************************************');
                             
-                            dados.close(); // Fecha o leitor após o sucesso
+                            dados.close(); //Fechamento
+
                         } //calculos, e final do Processo
                     
                     }); //unidade (Meses ou Anos)
